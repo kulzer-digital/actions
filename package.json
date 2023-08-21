@@ -1,0 +1,9 @@
+{
+  "name": "kulzer-github-actions",
+  "version": "1.0.0",
+  "description": "shared github actions",
+  "author": "Maximilian Beckenbach",
+  "license": "ISC",
+  "scripts": {
+  },
+}
