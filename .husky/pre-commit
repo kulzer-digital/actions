@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Get the name of the current currentBranch
+currentBranch=$(git rev-parse --abbrev-ref HEAD)
+
+# Check if the current branch is "main" and reject commit
+if [ "$currentBranch" = "main" ]; then
+echo "ERROR: Commit rejected by Husky pre-commit hook!"
+echo "You are about to commit to the \"$currentBranch\" branch!"
+echo "Please create a new branch and commit there."
+echo "Only pull requests can be merged into the \"$currentBranch\" branch."
+exit 1
+fi

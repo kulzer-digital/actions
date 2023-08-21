@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+node .husky/tools/set-commit-message-scope.js "$1" "$branch_name"
